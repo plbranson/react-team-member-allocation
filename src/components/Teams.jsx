@@ -14,30 +14,23 @@
  *  limitations under the License.
  */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+import React, { useContext } from "react";
+import DataContext from "../context/DataContext";
 
-.card-collection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+export default function Teams() {
+  const { handleTeamSelectionChange, selectedTeam } = useContext(DataContext);
 
-.standout {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px rgb(51, 51, 51) 0px 0px 0px 3px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .card-collection {
-    grid-template-columns: 1fr;
-  }
+  return (
+    <select
+      className="form-select form-set-lg"
+      id="teams"
+      value={selectedTeam}
+      onChange={handleTeamSelectionChange}
+    >
+      <option value="TeamA">Team A</option>
+      <option value="TeamB">Team B</option>
+      <option value="TeamC">Team C</option>
+      <option value="TeamD">Team D</option>
+    </select>
+  );
 }

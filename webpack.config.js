@@ -52,6 +52,10 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.(woff|woff2|ttf|eot|png|jpg|svg|gif)$/i,
+        use: ["file-loader"],
+      },
     ],
   },
 

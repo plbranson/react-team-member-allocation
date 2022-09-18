@@ -14,30 +14,24 @@
  *  limitations under the License.
  */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+import React from "react";
+import { Link } from "react-router-dom";
 
-.card-collection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.standout {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px rgb(51, 51, 51) 0px 0px 0px 3px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .card-collection {
-    grid-template-columns: 1fr;
-  }
+export default function Navbar() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link" to="/">
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/GroupedTeamMembers">
+            Teams
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }

@@ -14,30 +14,16 @@
  *  limitations under the License.
  */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+import React from "react";
 
-.card-collection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.standout {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px rgb(51, 51, 51) 0px 0px 0px 3px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .card-collection {
-    grid-template-columns: 1fr;
-  }
+export default function NotFound() {
+  return (
+    <main className="container">
+      <div className="row justify-content-center mt-3 mb-3">
+        <div className="col-8">
+          <h1 className="text-danger">404 - Page Not Found</h1>
+        </div>
+      </div>
+    </main>
+  );
 }

@@ -14,30 +14,15 @@
  *  limitations under the License.
  */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+import React, { useContext } from "react";
 
-.card-collection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+import TeamMemberCard from "./TeamMemberCard";
+import DataContext from "../context/DataContext";
 
-.standout {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px rgb(51, 51, 51) 0px 0px 0px 3px;
-}
+export default function TeamMembers() {
+  const { employees } = useContext(DataContext);
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .card-collection {
-    grid-template-columns: 1fr;
-  }
+  return employees.map((employee) => (
+    <TeamMemberCard key={employee.id} employee={employee} />
+  ));
 }
