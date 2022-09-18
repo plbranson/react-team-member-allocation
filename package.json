@@ -1,6 +1,8 @@
 {
-  "name": ".",
+  "name": "react-team-member-allocation",
   "version": "1.0.0",
+  "description": "React Team Member Allocation Project",
+  "main": "webpack.config.js",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
@@ -8,11 +10,23 @@
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
-  "license": "MIT",
-  "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plbranson/react-team-member-allocation.git"
   },
+  "keywords": [
+    "node",
+    "nodejs",
+    "react",
+    "react-dom",
+    "javascript"
+  ],
+  "author": "Patrick L. Branson",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/plbranson/react-team-member-allocation/issues"
+  },
+  "homepage": "https://github.com/plbranson/react-team-member-allocation#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-runtime": "^7.15.8",
